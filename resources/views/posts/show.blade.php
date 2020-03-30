@@ -1,7 +1,13 @@
-@if (session('message'))
-{{ session('message') }}
-@endif
-{{ $post->title }}
-{{ $post->content }}
+@extends('layouts.layouts')
 
-<a href="/posts/{{ $post->id" }}/Edit</a>
+@section('title', 'Simple Board')
+
+@section('content')
+@if (session('message'))
+        {{ session('message') }}
+    @endif
+
+    {{ $post->title }}
+    {{ $post->content }} 
+
+    <a href="/posts/{{ $post->id }}/edit">Edit</a>

@@ -14,6 +14,8 @@ class PostController extends Controller
      */
     public function index()
     {
+        $posts = Post::all();
+
         return view('posts.index', compact('posts'));
     }
 
@@ -39,7 +41,7 @@ class PostController extends Controller
         $post->title = $request->input('title');
         $post->content = $request->input('content');
         $post->save();
-        
+
         return redirect()->route('posts.show', ['id' => $post->id])->with('message', 'Post was successfully created.');
     }
 
@@ -54,7 +56,6 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
 
         return view('posts.show', compact('post'));
-    
     }
 
     /**
