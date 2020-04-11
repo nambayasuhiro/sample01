@@ -20,3 +20,6 @@ Route::get('/', 'PostController@index');
  if (env('APP_ENV') === 'local') {
     URL::forceScheme('https');
  }
+Auth::routes();
+
+//Route::get('/posts', 'PostsController@index')->name('posts');
