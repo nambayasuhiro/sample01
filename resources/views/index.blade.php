@@ -33,7 +33,7 @@
                   <img src="{{ asset('img/logo.png') }}" alt="Stream UI Kit" style="width: 100px;">
                 </a>
     
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded=20"false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
     
@@ -59,8 +59,8 @@
             </nav>
             <!-- End Navbar Light -->
                  <!-- Promo Block -->
-      <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white" style="background-image: url(assets/img-temp/1920x1080/img3.jpg);">
-        <!-- Promo Content -->
+      <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white" style="background-image: url{{ asset(' img-temp/1920x1080/img3.jpg') }}">
+        <!-- Promo Content --> 
         <div class="container u-overlay__inner u-ver-center u-content-space">
           <div class="row justify-content-center">
             <div class="col-12">
