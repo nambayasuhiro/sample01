@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja" class="no-js">
   <!-- Head -->
@@ -16,10 +17,10 @@
     <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,700%7COpen+Sans:300,400,600,700" rel="stylesheet">
 
     <!-- Bootstrap Styles -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/bootstrap/css/bootstrap.css') }}">
 
     <!-- Theme Styles -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/styles01.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/styles.css') }}">
   </head>
   <!-- End Head -->
 
@@ -59,7 +60,7 @@
             </nav>
             <!-- End Navbar Light -->
                  <!-- Promo Block -->
-      <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white" style="background-image: url{{ asset('/img-temp/1920x1080/img3.jpg') }}">
+      <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white" style="background-image: url({{ asset('/img-temp/1920x1080/img3.jpg') }})">
         <!-- Promo Content --> 
         <div class="container u-overlay__inner u-ver-center u-content-space">
           <div class="row justify-content-center">
