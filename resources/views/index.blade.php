@@ -3,7 +3,7 @@
   <!-- Head -->
   <head>
     <title>Namba</title>
-
+ 
     <!-- Meta -->
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,10 +16,10 @@
     <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,700%7COpen+Sans:300,400,600,700" rel="stylesheet">
 
     <!-- Bootstrap Styles -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/bootstrap/css/bootstrap.css') }}">
-
+    <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/css/bootstrap.css">
     <!-- Theme Styles -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
   </head>
   <!-- End Head -->
 
