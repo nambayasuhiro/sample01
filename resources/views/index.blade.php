@@ -30,7 +30,7 @@
              <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <div class="container">
                 <a class="navbar-brand mr-4" href="index.html">
-                  <img src="{{ asset('img/logo.png') }}" alt="Stream UI Kit" style="width: 100px;">
+                  <img src= 'assets/img/logo.png' alt="Stream UI Kit" style="width: 100px;">
                 </a>
     
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +59,7 @@
             </nav>
             <!-- End Navbar Light -->
                  <!-- Promo Block -->
-      <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white" style="background-image: url({{ asset('/img-temp/1920x1080/img3.jpg') }})">
+      <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white" style="background-image: url(assets/img-temp/1920x1080/img3.jpg);">
         <!-- Promo Content --> 
         <div class="container u-overlay__inner u-ver-center u-content-space">
           <div class="row justify-content-center">
@@ -85,7 +85,7 @@
                   <article class="mb-5">
                     <div class="d-flex align-items-center justify-content-center text-uppercase font-weight-bold small">
                       <span class="mr-3">世界一クールな </span>
-                      <img class="rounded-circle mr-3 mb-1" src="{{ asset('/img-temp/ava/img1.jpg') }}" width="35" alt="Author Image">
+                      <img class="rounded-circle mr-3 mb-1" src="assets/img-temp/ava/img1.jpg" width="35" alt="Author Image">
                       <a href="https://htmlstream.com">マーケティング視点のHP</a>
                     </div>
                   </article>
@@ -220,7 +220,7 @@
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img class="d-block w-100 rounded" src="{{ asset('/img-temp/1920x1080/img1.jpg') }}" alt="First slide">
+                    <img class="d-block w-100 rounded" src="assets/img-temp/1920x1080/img1.jpg" alt="First slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h5 class="h2 font-weight-light mb-0">お申し込み</h5>
                       <p class="lead">以下の申し込みフォームからお申し込みいただき、その情報を基に担当者から詳細ヒアリングのためメールにてご連絡をさせていただきます。</p>
@@ -228,7 +228,7 @@
                   </div>
 
                   <div class="carousel-item">
-                    <img class="d-block w-100 rounded" src="{{ asset('/img-temp/1920x1080/img2.jpg') }}"  alt="Second slide">
+                    <img class="d-block w-100 rounded" src="assets/img-temp/1920x1080/img2.jpg"  alt="Second slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h5 class="h2 font-weight-light mb-0">連絡方法</h5>
                       <p class="lead">サイトの詳細ヒアリングは「Chatwork」アプリにて行います。チャットワークをダウンロードし、弊社担当者と詳細の打ち合わせを開始してください。必要であればお電話でのMTGも可能です。</p>
@@ -236,7 +236,7 @@
                   </div>
 
                   <div class="carousel-item">
-                    <img class="d-block w-100 rounded" src="{{ asset('/img-temp/1920x1080/img9.jpg') }}"  alt="Third slide">
+                    <img class="d-block w-100 rounded" src="assets/img-temp/1920x1080/img9.jpg"  alt="Third slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h5 class="h2 font-weight-light mb-0">制作開始</h5>
                       <p class="lead">サイトの制作を開始いたします。サイトにてコンテンツなどが必要な場合は別途撮影プラン（別料金）もご検討ください。制作後最終的な精査をいただいたのちサイトをウェブ上へ公開いたします。</p>
@@ -245,7 +245,7 @@
                 </div>
 
                 <div class="carousel-item">
-                  <img class="d-block w-100 rounded" src="{{ asset('/img-temp/1920x1080/YOSX9526_TP_V.jpg') }}" alt="Fourth slide">
+                  <img class="d-block w-100 rounded" src="assets/img-temp/1920x1080/YOSX9526_TP_V.jpg" alt="Fourth slide">
                   <div class="carousel-caption d-none d-md-block">
                     <h5 class="h2 font-weight-light mb-0">お支払い</h5>
                     <p class="lead">サイト公開後サイトのお支払いをお振込にて行なってください。また月々のエンハンス費用（17800円）のご登録も別途登録URLをメールにてご案内いたします。</p>
@@ -253,7 +253,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <img class="d-block w-100 rounded" src="{{ asset('/img-temp/1920x1080/macbookFTHG1236_TP_V.jpg') }}" alt="fifth slide">
+                    <img class="d-block w-100 rounded" src="assets/img-temp/1920x1080/macbookFTHG1236_TP_V.jpg" alt="fifth slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h5 class="h2 font-weight-light mb-0">保守・編集</h5>
                       <p class="lead">小規模なサイトの内容更新などはお申し込み規約に基づいて無料にて対応をさせていただきます。都度チャットワークなどでお気軽にご相談ください。</p>
@@ -314,7 +314,7 @@
               <!-- Testimonial -->
               <blockquote class="u-blockquote-v2 rounded mb-5">サイト制作をご依頼の方は上記「ヒアリングフォーム」からサイトのイメージなどをご登録ください。その後弊社担当者より通常数時間後、混雑状況により最大３営業日以内にお電話をさせていただきます。その際に詳しいヒアリングなどをお電話にて行います。お客様と弊社で制作イメージが固まりましたらやりとりをChatWorkにて行いお見積兼請求書、電子契約書をお送りいたします。（契約書は電子契約書のためスマートフォンにて署名が可能です）請求書兼お見積書に沿って初期制作費用のお支払いを行なってください。お支払いが完了後制作に取り掛からせていただきます。制作の際は都度ChatWorkにて細かい調整を行わせていただきます。サイト制作が完了後以下納品納品承認フォームから承認を行ってください。そのフォームにて月々の決済登録も同時位に可能です。決済登録完了後納品されたウェブサイトはウェブ上に公開されます。通常申し込みから納品まで２週間から1ヶ月程度で可能です。</blockquote>
               <div class="media u-font-size-90">
-                <img class="d-flex align-self-center rounded-circle u-blockquote-v2__image u-box-shadow-lg mx-3 mt-2" src="{{ asset('/img-temp/ava/img2.jpg') }}"　alt="Image description">
+                <img class="d-flex align-self-center rounded-circle u-blockquote-v2__image u-box-shadow-lg mx-3 mt-2" src="assets/img-temp/ava/img2.jpg"　alt="Image description">
                 <div class="media-body align-self-center">
                   <strong class="d-block">スタンダード</strong>
                   <span class="u-font-size-75 text-dark"></span>
@@ -327,7 +327,7 @@
               <!-- Testimonial -->
               <blockquote class="u-blockquote-v2 rounded mb-5">プレミアプランは、スタンダードプランに追加して撮影から編集し全てお任せのプランになります。ただし、撮影の出張費は別途いだだきます。</blockquote>
               <div class="media u-font-size-90">
-                <img class="d-flex align-self-center rounded-circle u-blockquote-v2__image u-box-shadow-lg mx-3 mt-2" src="{{ asset('/img-temp/ava/img3.jpg') }}" alt="Image description">
+                <img class="d-flex align-self-center rounded-circle u-blockquote-v2__image u-box-shadow-lg mx-3 mt-2" src="assets/img-temp/ava/img3.jpg" alt="Image description">
                 <div class="media-body align-self-center">
                   <strong class="d-block">プレミア</strong>
                   <span class="u-font-size-75 text-dark"></span>
