@@ -57,6 +57,31 @@ class PostController extends Controller
     }
 
 
+
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+       $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+        ]);
+        
+        $blog = new blog();
+        $blog->title = $request->input('title');
+        $blog->content = $request->input('content');
+        $blog->save();
+
+        return redirect()->route('blogs.show', ['id' => $blog->id])->with('message', 'blog was successfully created.');
+    }
+
+
     /**
      * Display the specified resource.
      *
@@ -69,6 +94,21 @@ class PostController extends Controller
 
         return view('posts.show', compact('post'));
     }
+
+
+ /**
+     * Display the specified resource.
+     *
+     * @param  \App\Post  $post
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $blog = Blog::findOrFail($id);
+
+        return view('blog.show', compact('blog'));
+    }
+
 
     /**
      * Show the form for editing the specified resource.

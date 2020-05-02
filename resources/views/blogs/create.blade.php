@@ -1,4 +1,4 @@
-<form method="BLOG" action="/blogs">
+<form method="POST" action="/blogs">
     {{ csrf_field() }}
     <input type="text" name="title">
     <input type="text" name="content">

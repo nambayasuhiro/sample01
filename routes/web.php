@@ -14,8 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/blogs', 'PostController@index');
-Route::resource('blogs', 'PostController');
+Route::get('/posts', 'PostController@index');
+Route::resource('posts', 'PostController');
+Route::resource('blogs', 'BlogController');
+
 
  if (env('APP_ENV') === 'local') {
     URL::forceScheme('https');
