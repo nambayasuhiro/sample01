@@ -1,3 +1,4 @@
+@extends('layouts.layouts')
 
 @section('title', 'Simple Board')
 
@@ -6,7 +7,7 @@
     @if (session('message'))
         {{ session('message') }}
     @endif
-
+    
 <h1>Blog</h1>
 
 @foreach($blogs as $blog)
