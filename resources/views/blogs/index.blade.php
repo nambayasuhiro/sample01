@@ -8,7 +8,7 @@
         {{ session('message') }}
     @endif
     
-<h1>Blog</h1>
+
 
 @foreach($blogs as $blog)
 
@@ -31,6 +31,8 @@
         </div>
 @endforeach
 
-<a href="/blogs/create">New Blog</a> 
+<a href="/sample01/blogs/create">New Blog</a> 
 
 @endsection
+
+

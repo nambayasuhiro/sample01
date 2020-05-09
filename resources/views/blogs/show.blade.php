@@ -10,7 +10,8 @@
 
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">{{ $->title }}</h5>
+    
+            <h5 class="card-title">{{ $blog->title }}</h5>
             <p class="card-text">{{ $blog->content }}</p>
 
             <div class="d-flex" style="height: 36.4px;">
@@ -25,7 +26,7 @@
         </div>
     </div>
 
-    <a href="/blogs/{{ $blog->id }}/edit">Edit</a> | 
-    <a href="/blogs">Back</a>
+    <a href="/sample01/blogs/{{ $blog->id }}/edit">Edit</a> | 
+    <a href="/sample01/blogs">Back</a>
     
 @endsection

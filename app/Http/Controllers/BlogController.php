@@ -35,17 +35,24 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Blog $blog) 
     {
         $request->validate([
                        'title' => 'required',
                        'content' => 'required',
                    ]);
                     
-        $blog = new Blog();
-        $blog->title = $request->input('title');
-        $blog->content = $request->input('content');
-        $blog->save();
+        //$blog = new Blog();
+        //$blog->title = $request->input('title');
+        //$blog->content = $request->input('content');
+         //ファイル名を取得
+         $filename = $request->file('image')->getClientOriginalName();
+         // 配列のimageの値を書き換える
+         $storedata =  array_replace($request->all(), array('image' => $filename));
+         $blog->fill($storedata)->save();        
+         // ファイルの保存
+        $request->file('image')->storeAs('public/'.$blog->id.'/', $filename);
+        //$blog->save();
 
         return redirect()->route('blogs.show', ['id' => $blog->id])->with('message', 'Post was successfully created.');
     }
