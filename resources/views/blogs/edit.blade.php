@@ -21,11 +21,11 @@
         <input type="hidden" name="_method" value="PUT">
         <div class="form-group">
         <label for="exampleInputEmail1">Title</label>
-        <input type="text" class="form-control" aria-describedby="emailHelp" name="title" value="{{ old('title') == '' ? $post->title : old('title') }}">
+        <input type="text" class="form-control" aria-describedby="emailHelp" name="title" value="{{ old('title') == '' ? $blog->title : old('title') }}">
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Content</label>
-        <textarea class="form-control" name="content">{{ old('content') == '' ? $post->content : old('content') }}</textarea>
+        <textarea class="form-control" name="content">{{ old('content') == '' ? $blog->content : old('content') }}</textarea>
     </div>
     <button type="submit" class="btn btn-outline-primary">Submit</button>
 </form>
