@@ -16,7 +16,7 @@
     </div>
 @endif
 
-<form method="POST" action="/sample01/blogs/{{ $blog->id }}">
+<form method="POST" action="/sample01/blogs/{{ $blog->id }}"　enctype="nultipart/form-data">
         {{ csrf_field() }}
         <input type="hidden" name="_method" value="PUT">
         <div class="form-group">

@@ -46,7 +46,7 @@
                       <a class="nav-link" href="about-me.html">profiles</a>
                     </li>
                     <li class="nav-item mr-3">
-                      <a class="nav-link" href="about-us.html">blog</a>
+                      <a class="nav-link" href="/sample01/blogs">blog</a>
                     </li>
                     <li class="nav-item mr-3">
                       <a class="nav-link" href="services.html">ヒアリング</a>

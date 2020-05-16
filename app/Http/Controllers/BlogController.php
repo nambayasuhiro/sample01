@@ -24,10 +24,20 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('blogs.create');
-    }
+    public function create(Request $request){
+
+        $uploaded_image = $request->file('profile_image');
+         
+        if($request->hasFile('profile_image') && $uploaded_image->isValid()){
+           $file_name = $request->file('profile_image')->getCientOriginalName();
+           $path = $request->file('profile_image')->storeAs('profiles', 'file_name');
+        }
+
+
+        return;
+    
+        }
+    
 
     /**
      * Store a newly created resource in storage.

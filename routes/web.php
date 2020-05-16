@@ -18,6 +18,12 @@ Route::get('/posts', 'PostController@index');
 Route::resource('posts', 'PostController');
 Route::resource('blogs', 'BlogController');
 
+Route::post('blogs/cleate', 'BlogController@create');
+
+Route::get('/', 'TopController@index');
+Route::get('/blogs', 'TopController@blog');
+
+
 
  if (env('APP_ENV') === 'local') {
     URL::forceScheme('https');
