@@ -22,6 +22,7 @@ Route::post('blogs/cleate', 'BlogController@create');
 
 Route::get('/', 'TopController@index');
 Route::get('/blogs', 'TopController@blog');
+Route::get('/profile', 'ProfileController@profiles');
 
 
 

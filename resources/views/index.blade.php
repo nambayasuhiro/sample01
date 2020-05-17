@@ -43,7 +43,7 @@
                       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mr-3">
-                      <a class="nav-link" href="about-me.html">profiles</a>
+                      <a class="nav-link" href="/sample01/profiles">profiles</a>
                     </li>
                     <li class="nav-item mr-3">
                       <a class="nav-link" href="/sample01/blogs">blog</a>
