@@ -17,12 +17,12 @@ Route::get('/', function () {
 Route::get('/posts', 'PostController@index');
 Route::resource('posts', 'PostController');
 Route::resource('blogs', 'BlogController');
+Route::resource('profiles', 'ProfileController');
 
 Route::post('blogs/cleate', 'BlogController@create');
 
 Route::get('/', 'TopController@index');
 Route::get('/blogs', 'TopController@blog');
-Route::get('/profile', 'ProfileController@profiles');
 
 
 

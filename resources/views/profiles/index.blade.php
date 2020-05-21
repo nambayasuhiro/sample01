@@ -1,3 +1,23 @@
+public function index()
+    {
+        $posts = Post::all();
+
+        return view('profiles.index', compact('profiles'));
+    }
+
+<h1>Posts</h1>
+@foreach($posts as $post)
+    <a href="/profiles/{{ $profile->id }}">{{ $profile->title }}</a>
+    <a href="/profiles/{{ $profile->id }}/edit">Edit</a>
+
+    <form action="/profiles/{{ $profile->id }}" method="POST" onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <button type="submit">Delete</button>
+    </form>
+@endforeach
+
+<a href="/profiles/create">New Post</a>
 
 <!DOCTYPE html>
 <html lang="ja" class="no-js">

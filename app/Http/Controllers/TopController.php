@@ -17,5 +17,4 @@ class TopController extends Controller
 
         return view('blog', compact('blogs'));
     }
-
 }
