@@ -1,12 +1,12 @@
 public function index()
     {
-        $posts = Post::all();
+        $profiles = Post::all();
 
         return view('profiles.index', compact('profiles'));
     }
 
 <h1>Posts</h1>
-@foreach($posts as $post)
+@foreach($profiles as $profile)
     <a href="/profiles/{{ $profile->id }}">{{ $profile->title }}</a>
     <a href="/profiles/{{ $profile->id }}/edit">Edit</a>
 
