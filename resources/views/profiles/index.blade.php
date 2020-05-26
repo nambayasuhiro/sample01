@@ -4,20 +4,41 @@ public function index()
 
         return view('profiles.index', compact('profiles'));
     }
+    @extends('layouts.layouts')
+
+@section('title', 'Simple Board')
+
+@section('content')
+
+    @if (session('message'))
+        {{ session('message') }}
+    @endif
 
 <h1>Posts</h1>
-@foreach($profiles as $profile)
-    <a href="/profiles/{{ $profile->id }}">{{ $profile->title }}</a>
-    <a href="/profiles/{{ $profile->id }}/edit">Edit</a>
 
-    <form action="/profiles/{{ $profile->id }}" method="POST" onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };">
-        <input type="hidden" name="_method" value="DELETE">
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <button type="submit">Delete</button>
-    </form>
+
+@foreach($profiles as $profile)
+<div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ $profile->title }}</h5>
+                <p class="card-text">{{ $profile->content }}</p>
+
+                <div class="d-flex" style="height: 36.4px;">
+                    <a href="/sample01/profiles/{{ $profile->id }}" class="btn btn-outline-primary">Show</a>
+                    <a href="/sample01/profiles/{{ $profile->id }}/edit" class="btn btn-outline-primary">Edit</a>
+                    <form action="/sample01/profiles/{{ $profile->id }}" method="POST" onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 @endforeach
 
-<a href="/profiles/create">New Post</a>
+<a href="/sample01/profiles/create">New Post</a>
+
+@endsection
 
 <!DOCTYPE html>
 <html lang="ja" class="no-js">

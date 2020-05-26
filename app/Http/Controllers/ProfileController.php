@@ -40,6 +40,7 @@ class ProfileController extends Controller
                        'content' => 'required',
                    ]);
                     
+                   
         //$blog = new Blog();
         //$blog->title = $request->input('title');
         //$blog->content = $request->input('content');
