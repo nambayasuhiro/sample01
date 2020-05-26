@@ -9,15 +9,20 @@
 @endif
 
 
+@foreach($profiles as $profile)
 <div class="card">
         <div class="card-body">
-            <h5 class="card-title">{{ $profile->title }}</h5>
-            <p class="card-text">{{ $profile->content }}</p>
+            <p class="card-varchara">{{ $profile->name }}</p>
+            <p class="card-varchara">{{ $profile->explanation }}</p>
+            <p class="card-text">{{ $profile->about_me }}</p>
+            <p class="card-varchara">{{ $profile->my_skils }}</p>
+
+
 
             <div class="d-flex" style="height: 36.4px;">
                 <button class="btn btn-outline-primary">Show</button>
-                <a href="/profiles/{{ $profile->id }}/edit" class="btn btn-outline-primary">Edit</a>
-                <form action="/profiles/{{ $profile->id }}" method="POST" onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };">
+                <a href="/sample01/profiles/{{ $profile->id }}/edit" class="btn btn-outline-primary">Edit</a>
+                <form action="/sample01/profiles/{{ $profile->id }}" method="POST" onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };">
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <button type="submit" class="btn btn-outline-danger">Delete</button>
@@ -25,8 +30,9 @@
             </div>
         </div>
     </div>
+    @endforeach
 
-    <a href="/profiles/{{ $profile->id }}/edit">Edit</a>
-    <a href="/profiles">Back</a>
+    <a href="/sample01/profiles/{{ $profile->id }}/edit">Edit</a>
+    <a href="/sample01/profiles">Back</a>
 
     @endsection 

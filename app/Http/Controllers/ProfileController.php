@@ -36,11 +36,12 @@ class ProfileController extends Controller
     public function store(Request $request, Profile $Profile) 
     {
         $request->validate([
-                       'title' => 'required',
-                       'content' => 'required',
+                       'name' => 'required',
+                       'explanation' => 'required',
+                       'about_me' => 'required',
+                       'my_skils' => 'required',
                    ]);
                     
-                   
         //$blog = new Blog();
         //$blog->title = $request->input('title');
         //$blog->content = $request->input('content');

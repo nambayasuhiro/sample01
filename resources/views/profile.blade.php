@@ -12,11 +12,13 @@
 
 @foreach($profiles as $profile)
 
-
 <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">{{ $profile->title }}</h5>
-                <p class="card-text">{{ $profile->content }}</p>
+        <div class="card-body">
+            <p class="card-integer">{{ $profile->id }}</p>
+            <p class="card-varchara">{{ $profile->name }}</p>
+            <p class="card-varchara">{{ $profile->explanation }}</p>
+            <p class="card-text">{{ $profile->about_me }}</p>
+            <p class="card-varchara">{{ $profile->my_skils }}</p>
                 <p class="card-text samneil"><img class="samneil" src="{{ asset('public/storage/') }}/{{ $profile->id }}/{{ $profile->image }}"></p>
                 <div class="d-flex" style="height: 36.4px;">
                 <a href="/sample01/profiles/{{ $profile->id }}" class="btn btn-outline-primary">詳細</a>
