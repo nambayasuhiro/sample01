@@ -7,15 +7,17 @@
 @if (session('message'))
     {{ session('message') }}
 @endif
-
-
-@foreach($profiles as $profile)
 <div class="card">
         <div class="card-body">
-            <p class="card-varchara">{{ $profile->name }}</p>
-            <p class="card-varchara">{{ $profile->explanation }}</p>
+
+@foreach($profiles as $profile)
+            <p class="card-title">{{ $profile->name }}</p>
+            <p class="card-text">{{ $profile->explanation }}</p>
             <p class="card-text">{{ $profile->about_me }}</p>
-            <p class="card-varchara">{{ $profile->my_skils }}</p>
+            <p class="card-varchara">{{ $profile->php_laravel }}</p>
+            <p class="card-varchara">{{ $profile->html_css }}</p>
+            <p class="card-varchara">{{ $profile->wix }}</p>
+            <p class="card-varchara">{{ $profile->marketing }}</p>
 
 
 

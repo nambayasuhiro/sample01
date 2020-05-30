@@ -23,7 +23,10 @@ public function index()
             <p class="card-varchara">{{ $profile->name }}</p>
             <p class="card-varchara">{{ $profile->explanation }}</p>
             <p class="card-text">{{ $profile->about_me }}</p>
-            <p class="card-varchara">{{ $profile->my_skils }}</p>
+            <p class="card-varchara">{{ $profile->php_laravel }}</p>
+            <p class="card-varchara">{{ $profile->html_css }}</p>
+            <p class="card-varchara">{{ $profile->wix }}</p>
+            <p class="card-varchara">{{ $profile->marketing }}</p>
 
 
                 <div class="d-flex" style="height: 36.4px;">

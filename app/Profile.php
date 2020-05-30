@@ -10,6 +10,9 @@ class Profile extends Model
         'name',
         'explanation',
         'about_me',
-        'my_skils',
+        'php_laravel',
+        'html_css',
+        'wix',
+        'marketing',
 ];
 }

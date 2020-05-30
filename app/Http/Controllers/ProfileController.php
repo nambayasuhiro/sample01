@@ -33,28 +33,27 @@ class ProfileController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Profile $Profile) 
+    public function store(Request $request, Profile $profile) 
     {
         $request->validate([
                        'name' => 'required',
                        'explanation' => 'required',
-                       'about_me' => 'required',
-                       'my_skils' => 'required',
                    ]);
                     
         //$blog = new Blog();
         //$blog->title = $request->input('title');
         //$blog->content = $request->input('content');
          //ファイル名を取得
-         $filename = $request->file('image')->getClientOriginalName();
+         //$filename = $request->file('image')->getClientOriginalName();
          // 配列のimageの値を書き換える
-         $storedata =  array_replace($request->all(), array('image' => $filename));
-         $profile->fill($storedata)->save();        
+         //$storedata =  array_replace($request->all(), array('image' => $filename));
+         $profile->fill($request->all())->save();        
          // ファイルの保存
-        $request->file('image')->storeAs('public/'.$profile->id.'/', $filename);
+        //$request->file('image')->storeAs('public/'.$profile->id.'/', $filename);
         //$blog->save();
 
-        return redirect()->route('profiles.show', ['id' => $profile->id])->with('message', 'Post was successfully created.');
+        return redirect(route('profiles', $profile->id))->with('message', 'detail新しい記事を登録しました。');
+      //  return redirect()->route('profiles.index', ['id' => $profile->id])->with('message', 'Post was successfully created.');
     }
     /**
      * Display the specified resource.
@@ -62,8 +61,9 @@ class ProfileController extends Controller
      * @param  \App\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function show(Profile $profile)
+    public function show($id)
     {
+        $profile = Profile::findOrFail($id);
         return view('profiles.show', compact('profile'));
     }
     /**
@@ -87,11 +87,15 @@ class ProfileController extends Controller
     public function update(Request $request, Profile $profile)
     {
         $request->validate([
-            'title' => 'required',
-            'content' => 'required',
+            'name' => 'required',
+            'explanation' => 'required',
+            'about_me' => 'required',
+            'my_skils' => 'required',
         ]);
-$profile->title = $request->input('title');
-$profile->content = $request->input('content');
+$profile->name = $request->input('name');
+$profile->explanation = $request->input('explanation');
+$profile->about_me = $request->input('about_me');
+$profile->my_skils = $request->input('my_skils');
 $profile->save();
 
 return redirect()->route('profiles.show', ['id' => $profile->id])->with('message', 'Post was successfully updated.');

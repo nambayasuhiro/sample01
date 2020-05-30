@@ -25,7 +25,7 @@
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Content</label>
-        <textarea class="form-control" name="content">{{ old('content') == '' ? $profile->content : old('content') }}</textarea>
+        <textarea class="form-control" name="content">{{ old('content') == $profile->content : old('content') }}</textarea>
     </div>
     <button type="submit" class="btn btn-outline-primary">Submit</button>
 </form>

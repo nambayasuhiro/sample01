@@ -18,7 +18,10 @@ class CreateProfilesTable extends Migration
             $table->string('name');
             $table->string('explanation');
             $table->text('about_me');
-            $table->integer('my_skils');
+            $table->integer('php_laravel');
+            $table->integer('html_css');
+            $table->integer('wix');
+            $table->integer('marketing');
             $table->timestamps();
         });
     }
