@@ -8,7 +8,7 @@
         {{ session('message') }}
     @endif
     
-
+    @component('components.nav')
 
 @foreach($blogs as $blog)
 
@@ -71,58 +71,37 @@
   <body>
     <!-- Header -->
     <header>
-      <!-- Navbar -->
-      <nav class="js-navbar-scroll navbar fixed-top navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/img/logo-white.png" s
-          </a>
-
-          <button class="navbar-toggler" type="button"
-                  data-toggle="collapse"
-                  data-target="#navbarTogglerDemo"
-
-                  aria-controls="navbarTogglerDemo"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo">
-            <ul class="navbar-nav mt-2 mt-lg-0">
-              <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <a class="nav-link active" href="index.html">Back to UI Kit</a>
-              </li>
-            </ul>
-
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-              <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <a class="nav-link" href="home-page.html">Home</a>
-              </li>
-              <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <a class="nav-link" href="services.html">Services</a>
-              </li>
-              <li class="nav-item dropdown mr-4 mb-2 mb-lg-0">
-                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  About <i class="fas fa-angle-down small ml-1"></i>
+            <!-- Navbar Light -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container">
+                <a class="navbar-brand mr-4" href="index.html">
+                  <img src= 'assets/img/logo.png' alt="Stream UI Kit" style="width: 100px;">
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item active" href="about-us.html">About Us</a>
-                  <a class="dropdown-item" href="about-me.html">About Me</a>
+    
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active mr-3">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-3">
+                      <a class="nav-link" href="/sample01/profiles">profile</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                      <a class="nav-link" href="/sample01/blogs">blog</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                      <a class="nav-link" href="services.html">ヒアリング</a>
+                    </li>
+                    </li>
+                  </ul>
+    
                 </div>
-              </li>
-              <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <a class="nav-link" href="contacts.html">Contacts</a>
-              </li>
-            </ul>
-            <div>
-              <a class="btn btn-primary" data-toggle="modal" href="#callUsModal" href="#!">
-                <i class="fas fa-phone-square mr-1"></i> Call Me
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+              </div>
+            </nav>
       <!-- End Navbar -->
 
       <!-- Promo Block -->
