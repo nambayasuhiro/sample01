@@ -22,8 +22,8 @@ Route::resource('profiles', 'ProfileController');
 Route::post('blogs/cleate', 'BlogController@create');
 
 Route::get('/', 'TopController@index');
-Route::get('/blogs', 'TopController@blog');
-Route::get('/profiles', 'TopController@profile');
+Route::get('/blog', 'TopController@blog');
+Route::get('/profile', 'TopController@profile');
 
 
 

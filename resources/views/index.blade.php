@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <title>@yield('title')</title>
@@ -9,7 +10,7 @@
         
     </head>
 <body>
-  @component('components.nav')
+@extends('layouts.nav')
 
     <main role="main">
 
