@@ -1,5 +1,5 @@
 
-@extends('layouts. nav')
+@extends('layouts.layouts')
 
 @section('title', 'Simple Board')
 

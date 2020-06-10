@@ -33,9 +33,8 @@ class BlogController extends Controller
            $path = $request->file('profile_image')->storeAs('profiles', 'file_name');
         }
 
+        return view('blogs.create');
 
-        return;
-    
         }
     
 

@@ -431,7 +431,7 @@
 
               <!-- Tweet -->
               <div class="mr-3">
-                <a href="https://www.instagram.com/yasuhironamba/?hl=ja" class="twitter-share-button" data-size="large" data-text="Stream UI Kit is beautiful Open Source Bootstrap 4 UI Kit under MIT license." data-hashtags="StreamUIKit, Bootstrap, Freebies" data-related="htmlstream, freebies, bootstrap">@instagram</a>
+                <a href="https://www.instagram.com/yasu_namba/?hl=ja" class="twitter-share-button" data-size="large" data-text="Stream UI Kit is beautiful Open Source Bootstrap 4 UI Kit under MIT license." data-hashtags="StreamUIKit, Bootstrap, Freebies" data-related="htmlstream, freebies, bootstrap">@instagram</a>
               </div>
               <!-- End Tweet -->
             </div>

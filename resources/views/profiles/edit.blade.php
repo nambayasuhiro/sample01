@@ -16,12 +16,12 @@
     </div>
 @endif
 
-<form method="POST" action="/profile/{{ $profile->id }}">
+<form method="POST" action="/sample01/profiles/{{ $profile->id }}">
         {{ csrf_field() }}
         <input type="hidden" name="_method" value="PUT">
         <div class="form-group">
         <label for="exampleInputEmail1">Title</label>
-        <input type="text" class="form-control" aria-describedby="emailHelp" name="title" value="{{ old('title') == '' ? $post->title : old('title') }}">
+        <input type="text" class="form-control" aria-describedby="emailHelp" name="title" value="{{ old('title') == '' ? $profile->title : old('title') }}">
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Content</label>
@@ -30,7 +30,7 @@
     <button type="submit" class="btn btn-outline-primary">Submit</button>
 </form>
 
-<a href="/profiles/{{ $profile->id }}">Show</a> | 
-<a href="/profiles">Back</a>
+<a href="/sample01/profiles/{{ $profile->id }}">Show</a> | 
+<a href="/sample01/profiles">Back</a>
 
 @endsection

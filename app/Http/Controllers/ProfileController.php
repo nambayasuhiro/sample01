@@ -16,7 +16,7 @@ class ProfileController extends Controller
     {
         $profiles = Profile::all();
 
-        return view('profiles.index', compact('profiles'));
+        return view('profile', compact('profiles'));
     }
 
     /**
@@ -38,8 +38,11 @@ class ProfileController extends Controller
     public function store(Request $request, Profile $profile) 
     {
         $request->validate([
-                       'name' => 'required',
-                       'explanation' => 'required',
+            'name' => 'required',
+            'explanation' => 'required',
+            'about_me' => 'required',
+            'my_skils' => 'required',
+       
                    ]);
                     
         //$blog = new Blog();
@@ -53,8 +56,9 @@ class ProfileController extends Controller
          // ファイルの保存
         //$request->file('image')->storeAs('public/'.$profile->id.'/', $filename);
         //$blog->save();
+        return redirect()->route('profiles.show', ['id' => $profiles->id])->with('message', 'Post was successfully created.');
 
-        return redirect(route('profiles', $profile->id))->with('message', 'detail新しい記事を登録しました。');
+     //return redirect()route('profiles', $profile->id))->with('message', 'detail新しい記事を登録しました。');
       //  return redirect()->route('profiles.index', ['id' => $profile->id])->with('message', 'Post was successfully created.');
     }
     /**
