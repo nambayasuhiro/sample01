@@ -41,7 +41,6 @@ class ProfileController extends Controller
             'name' => 'required',
             'explanation' => 'required',
             'about_me' => 'required',
-            'my_skils' => 'required',
        
                    ]);
                     
@@ -56,7 +55,7 @@ class ProfileController extends Controller
          // ファイルの保存
         //$request->file('image')->storeAs('public/'.$profile->id.'/', $filename);
         //$blog->save();
-        return redirect()->route('profiles.show', ['id' => $profiles->id])->with('message', 'Post was successfully created.');
+        return redirect()->route('profiles.show', ['id' => $profile->id])->with('message', 'Post was successfully created.');
 
      //return redirect()route('profiles', $profile->id))->with('message', 'detail新しい記事を登録しました。');
       //  return redirect()->route('profiles.index', ['id' => $profile->id])->with('message', 'Post was successfully created.');
@@ -71,6 +70,7 @@ class ProfileController extends Controller
     {
         $profile = Profile::findOrFail($id);
         return view('profiles.show', compact('profile'));
+    
     }
     /**
      * Show the form for editing the specified resource.
@@ -96,12 +96,10 @@ class ProfileController extends Controller
             'name' => 'required',
             'explanation' => 'required',
             'about_me' => 'required',
-            'my_skils' => 'required',
         ]);
 $profile->name = $request->input('name');
 $profile->explanation = $request->input('explanation');
 $profile->about_me = $request->input('about_me');
-$profile->my_skils = $request->input('my_skils');
 $profile->save();
 
 return redirect()->route('profiles.show', ['id' => $profile->id])->with('message', 'Post was successfully updated.');
