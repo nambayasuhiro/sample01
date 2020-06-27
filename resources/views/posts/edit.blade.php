@@ -16,7 +16,7 @@
     </div>
 @endif
 
-<form method="POST" action="/posts/{{ $post->id }}">
+<form method="POST" action="/sample01/posts/{{ $post->id }}">
     {{ csrf_field() }}
     <input type="hidden" name="_method" value="PUT">
     <div class="form-group">
@@ -30,7 +30,7 @@
     <button type="submit" class="btn btn-outline-primary">Submit</button>
 </form>
 
-<a href="/posts/{{ $post->id }}">Show</a> | 
-<a href="/posts">Back</a>
+<a href="/sample01/posts/{{ $post->id }}">Show</a> | 
+<a href="/sample01/posts">Back</a>
 
 @endsection

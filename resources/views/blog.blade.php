@@ -49,6 +49,7 @@
       <!-- Promo Block -->
       <section class="js-parallax u-promo-block u-promo-block--mheight-500 u-overlay u-overlay--dark text-white" style="background-image: url(assets/img-temp/1920x1080/img6.jpg);">
         <!-- Promo Content -->
+        @foreach($blogs as $blog)
         <div class="container u-overlay__inner u-ver-center u-content-space">
           <div class="row justify-content-center">
             <div class="col-12">
@@ -106,7 +107,7 @@
     </div>
   </div>
 
-
+  @endforeach
       <!-- About -->
       <!-- End About -->
 <!-- ループさせたい内容 end -->

@@ -7,13 +7,10 @@
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        
+        @extends('layouts.nav')
     </head>
 <body>
-@extends('layouts.nav')
-
     <main role="main">
-
                  <!-- Promo Block -->
       <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white" style="background-image: url(assets/img-temp/1920x1080/img3.jpg);">
         <!-- Promo Content --> 

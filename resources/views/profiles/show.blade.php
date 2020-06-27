@@ -1,4 +1,4 @@
-@extends('layouts, layouts')
+@extends('layouts.layouts')
 
 @section('title', 'Simple Board')
 
@@ -7,10 +7,9 @@
 @if (session('message'))
     {{ session('message') }}
 @endif
+
 <div class="card">
         <div class="card-body">
-
-@foreach($profiles as $profile)
             <p class="card-title">{{ $profile->name }}</p>
             <p class="card-text">{{ $profile->explanation }}</p>
             <p class="card-text">{{ $profile->about_me }}</p>
@@ -32,7 +31,7 @@
             </div>
         </div>
     </div>
-    @endforeach
+
 
     <a href="/sample01/profiles/{{ $profile->id }}/edit">Edit</a>
     <a href="/sample01/profiles">Back</a>

@@ -1,4 +1,4 @@
-@extends('layouts, layouts')
+@extends('layouts.layouts')
 
 @section('title', 'Simple Board')
 
@@ -18,15 +18,37 @@
 
 <form method="POST" action="/sample01/profiles/{{ $profile->id }}">
         {{ csrf_field() }}
-        <input type="hidden" name="_method" value="PUT">
         <div class="form-group">
-        <label for="exampleInputEmail1">Title</label>
-        <input type="text" class="form-control" aria-describedby="emailHelp" name="title" value="{{ old('title') == '' ? $profile->title : old('title') }}">
+        <label for="exampleInputEmail1">名前</label>
+        <input type="text" class="form-control"  name="name" value="{{old('name')}}">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">Content</label>
-        <textarea class="form-control" name="content">{{ old('content') == $profile->content : old('content') }}</textarea>
+        <label for="exampleInputEmail1">生年月日</label>
+        <input type="text" class="form-control" name="explanation" value="{{old('explanation')}}">
     </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">紹介</label>
+        <textarea class="form-control" name="about_me">{{old('about_me')}}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">PHP.laravel</label>
+         <input type="number" class="form-control" name="php_laravel" value="{{old('php_laravel')}}">
+
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">HTML.CSS</label>
+         <input type="number" class="form-control"  name="html_css" value="{{old('html_css')}}">
+
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">WIX</label>
+         <input type="number" class="form-control" name="wix" value="{{old('wix')}}">
+
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">マーケティング</label>
+         <input type="number" class="form-control" name="marketing" value="{{old('marketing')}}">
+
     <button type="submit" class="btn btn-outline-primary">Submit</button>
 </form>
 
